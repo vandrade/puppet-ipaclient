@@ -1,28 +1,14 @@
-[![Build Status](https://travis-ci.org/stbenjam/puppet-ipaclient.svg?branch=master)](https://travis-ci.org/stbenjam/puppet-ipaclient)
-
 IPAclient
 ========
 
 This module configures clients to use FreeIPA with as little fuss as possible.
-
-Feedback and pull requests are very welcome.
-
-What's New
-----------
-
-(Experimental) Ubuntu support!
-
-Refactored parameters to have better names, version
-2.0 isn't compatible with previous versions of the
-module.
+Based on Stephen Benjamin's [puppet-ipaclient](https://github.com/stbenjam/puppet-ipaclient)
 
 Supported Platforms
 -------------------
 
 Tested on:
-  * RHEL and CentOS 6
-  * Fedora 20
-  * Ubuntu 14.04
+  * CentOS 6
 
 It should hopefully work on any recent Red Hat or Debian
 distro with IPA packages.  
@@ -46,7 +32,8 @@ More complex:
        password        => "unicorns",
        server          => ["ipa01.pixiedust.com", "ipa02.pixiedust.com"]
        domain          => "pixiedust.com",
-       realm           => "PIXEDUST.COM",
+       hostname	       => "ipaclient01.pixiedust.com"
+       realm           => "PIXIEDUST.COM",
        mkhomedir       => false,
        automount       => true,
        ssh             => false,

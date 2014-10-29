@@ -54,7 +54,8 @@ Automounter only:
 
 MIT License
 -----------
-Original work **Copyright (c) 2014 Stephen Benjamin**
+Original work __Copyright (c) 2014 Stephen Benjamin__.
+
 Modified work Copyright 2014 Victor Andrade
 
 Permission is hereby granted, free of charge, to any person obtaining 

@@ -3,6 +3,7 @@ class ipaclient::params {
   $server         = ''
   $domain         = ''
   $realm          = ''
+  $hostname	  = ${::fqdn}
   $principal      = ''
   $password       = ''
   $ntp_server     = ''

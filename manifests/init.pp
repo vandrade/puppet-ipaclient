@@ -23,6 +23,8 @@
 #
 # $installer::             IPA install command
 #
+# $hostname::		   Hostname (fqdn)
+#
 # $mkhomedir::             Automatically make /home/<user> or not
 #                          Default: true
 #
@@ -83,6 +85,7 @@ class ipaclient (
   $fixed_primary      = $ipaclient::params::fixed_primary,
   $installer          = $ipaclient::params::installer,
   $mkhomedir          = $ipaclient::params::mkhomedir,
+  $hostname	      = $ipaclient::params::hostname,
   $options            = $ipaclient::params::options,
   $package            = $ipaclient::params::package,
   $password           = $ipaclient::params::password,
@@ -126,6 +129,12 @@ class ipaclient (
         $opt_realm = ''
       }
 
+      if $hostname {
+        $opt_hostname = ['--hostname', $hostname]
+      } else {
+        $opt_hostname = ''
+      }
+
       if $principal {
         $opt_principal = ['--principal', "${principal}@${realm}"]
       } else {
@@ -152,9 +161,9 @@ class ipaclient (
 
       # Flatten the arrays, delete empty options, and shellquote everything
       $command = shellquote(delete(flatten([$installer,$opt_realm,$opt_password,
-                            $opt_principal,$opt_mkhomedir,$opt_domain,
+                            $opt_principal,$opt_mkhomedir,$opt_domain,$opt_hostname,
                             $opt_server,$opt_fixed_primary,$opt_ssh,$options,
-                            '--force','--unattended']), ''))
+                            '--unattended']), ''))
 
       exec { 'ipa_installer':
         command => $command,

@@ -33,7 +33,7 @@ class ipaclient::params {
         $package = 'freeipa-client'
     }
     default: {
-      fail("${::fqdn}: This module does not support operatingsystem ${::operatingsystem}")
+      fail("${::hostname}: This module does not support operatingsystem ${::operatingsystem}")
     }
   }
 }

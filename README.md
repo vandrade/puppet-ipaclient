@@ -54,7 +54,8 @@ Automounter only:
 
 MIT License
 -----------
-Copyright (c) 2014 Stephen Benjamin
+Original work **Copyright (c) 2014 Stephen Benjamin**
+Modified work Copyright 2014 Victor Andrade
 
 Permission is hereby granted, free of charge, to any person obtaining 
 a copy of this software and associated documentation files (the "Software"), 

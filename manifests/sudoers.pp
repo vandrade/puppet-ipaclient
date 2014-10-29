@@ -133,7 +133,7 @@ class ipaclient::sudoers (
     } else {
       $enable_sssd_services = $::sssd_services ? {
         /sudo/  => $::sssd_services,
-        default => "$::sssd_services, sudo"
+        default => "nss, pam, ssh, sudo"
       }
     }
 

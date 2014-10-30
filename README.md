@@ -2,7 +2,7 @@ IPAclient
 ========
 
 This module configures clients to use FreeIPA with as little fuss as possible.
-Based on Stephen Benjamin's [puppet-ipaclient](https://github.com/stbenjam/puppet-ipaclient)
+Based on Stephen Benjamin's [puppet-ipaclient](https://github.com/stbenjam/puppet-ipaclient) with slightly modifications.
 
 Supported Platforms
 -------------------
@@ -54,9 +54,7 @@ Automounter only:
 
 MIT License
 -----------
-Original work __Copyright (c) 2014 Stephen Benjamin__.
-
-Modified work Copyright 2014 Victor Andrade
+Copyright (c) 2014 Stephen Benjamin
 
 Permission is hereby granted, free of charge, to any person obtaining 
 a copy of this software and associated documentation files (the "Software"), 

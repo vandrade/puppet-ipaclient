@@ -8,7 +8,8 @@ Supported Platforms
 -------------------
 
 Tested on:
-  * CentOS 6
+  * RedHat EL 6.6
+  * CentOS 6.4
 
 It should hopefully work on any recent Red Hat or Debian
 distro with IPA packages.  
